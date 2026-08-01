@@ -1,12 +1,19 @@
 from telegram import Bot
 from config import TELEGRAM_BOT_TOKEN
+import asyncio
 
 
-def test_connection():
+async def test_connection():
     bot = Bot(token=TELEGRAM_BOT_TOKEN)
 
-    me = bot.get_me()
+    me = await bot.get_me()
 
-    print(f"Connected successfully!")
+    print("===================================")
+    print("Telegram Bot Connected Successfully")
+    print("===================================")
     print(f"Bot Name : {me.first_name}")
     print(f"Username : @{me.username}")
+
+
+if __name__ == "__main__":
+    asyncio.run(test_connection())
