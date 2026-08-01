@@ -1,4 +1,5 @@
-from telegram_bot import test_connection
+from channel_reader import get_updates
+import asyncio
 
 if __name__ == "__main__":
-    test_connection()
+    asyncio.run(get_updates())
