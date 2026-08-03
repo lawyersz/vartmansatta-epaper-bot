@@ -21,10 +21,10 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run Bot
-  env:
-    TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-    WP_URL: ${{ secrets.WP_URL }}
-    WP_USERNAME: ${{ secrets.WP_USERNAME }}
-    WP_APP_PASSWORD: ${{ secrets.WP_APP_PASSWORD }}
-  run: |
-    python main.py
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          WP_URL: ${{ secrets.WP_URL }}
+          WP_USERNAME: ${{ secrets.WP_USERNAME }}
+          WP_APP_PASSWORD: ${{ secrets.WP_APP_PASSWORD }}
+        run: |
+          python main.py
